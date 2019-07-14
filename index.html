@@ -1,0 +1,206 @@
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <!--ignore this two lines*/-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+        <!--change the title to the name of your dog*/-->
+        <title>RUDI</title>
+    
+    </head>
+    
+    
+    <body>
+    
+        <div class="mouses">
+        
+        </div>
+        
+  
+        
+            
+        
+        <div class=rudi>
+        
+                    <text >
+                        RUDI
+                        
+                    </text>
+        </div>
+        
+        
+  
+    
+    </body>
+    
+    
+    <style>
+        
+        
+        @font-face {
+    font-family: 'friendshiptestakzenteregular';
+    src: url('fonts/friendshiptestakzente-regular-webfont.woff2') format('woff2'),
+         url('fonts/friendshiptestakzente-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+        
+        @font-face {
+    font-family: 'fragmentregular';
+    src: url('fonts/fragment-regular-webfont.woff2') format('woff2'),
+         url('fonts/fragment-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+        
+        
+        body{
+            background-color:ghostwhite;
+            height:100%;
+            width:100%;
+            overflow:hidden;
+        
+        }
+    
+        .importantthings{
+            
+            font-family: ;
+            font-size: ;
+            font-kerning: ;
+            
+            text-align: ;
+            text-transform: uppercase;
+            text-overflow: ;
+            text-shadow: 0 0 1px white;
+            
+            transform: scaleX();
+            transform: scaleY();
+            transform: ;
+            
+            color: ;
+            
+            white-space: ;
+            
+            
+        }
+        
+     
+        
+        .mouse {
+            position: absolute;
+            left:0;
+            top:0;
+            
+            height:auto;
+            font-family:fragmentregular;
+            font-size: 8vw;
+            color:white;
+            text-shadow: 0 0 2px black;
+        }
+        .mouses{
+            
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            overflow:hidden;
+            
+        }
+           .rudi{
+            
+            font-family: friendshiptestakzenteregular;
+            font-size: 40vw;
+            position: fixed;
+            float:right;
+            text-shadow: 0 0 20px blue; 
+            
+            
+        }
+        
+        .rudi:hover{
+            color: yellow;
+            font-size: 10vw;
+            position:absolute;
+            top:50vh;
+            left:40vw;
+    
+        }
+        
+        
+        
+        
+    </style>
+    
+    
+    <script>
+        
+        //This means, everything inside this brackets will be called directly, when the document is open
+        $(document).ready(function(){
+
+            //get the height of the window and the width of the <body> for using them in your function
+            var h = $(window).height();
+            var w = $('body').width();
+
+            //This means, that the function will be called, when '.text' is clicked
+            $('.text').on('click',function(){
+            
+            
+            });
+            
+            //this function will be called every time the mouse moves
+            $('.text').mouseover(function(){
+            
+                
+            });
+            
+            //everything inside this brackets happens, when you resize the browser window
+            $(window).resize(function(){
+
+
+            });
+            
+            //This means, that the function will be called, when '.text' is clicked
+            $('.text').on('click',function(){
+                
+                
+            });
+            
+            //this function will be called every time the mouse moves
+            $('body').mousemove(function(e){
+
+                    //saves the x- and y-coordinate in two variables
+                    var x =e.pageX;
+                    var y =e.pageY;
+
+                    $('.text').css({'font-size': y + x}); 
+                    $('#text2').css({'color': "rgb(" + (x - y) + "," + y + "," + x + ")"});
+                
+                });
+            
+        });
+            
+            
+        //This means, that the loop is doing '<p>snoop dogg</p>' inside the bracket ten times
+        for(i=0; i<200; i++){ 
+                
+                x = Math.floor((Math.random() *80) +1);
+                y = Math.floor((Math.random() *80) +1);
+            
+                $('<div class="mouse" id="mouse'+i+'"> mouse </div>').appendTo( $( '.mouses' ) );
+                $('#mouse' + i).css({'top': y + '%'});
+                $('#mouse' + i).css({'left': x + '%'});
+            }
+        
+        
+    
+    </script>
+    
+</html>
